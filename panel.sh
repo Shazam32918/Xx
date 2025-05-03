@@ -2,24 +2,14 @@
 
 # Display the banner
 cat << "EOF"
-╔═════════════════════════════════════════╗
-║ █ █ █   █ █ █   █ █ █   █ █ █             ║
-║ █   █   █   █   █   █   █   █             ║
-║ █ █ █   █ █ █   █ █ █   █   █             ║
-║ █   █   █   █   █   █   █   █             ║
-║ █   █   █   █   █   █   █ █ █             ║
-╚═════════════════════════════════════════╝
+ _   _ ____  ____ _  __ _   _ ____  _  _
+| \ | |  _ \|  _ \ |/ /| \ | / ___|| || |
+|  \| | |_) | | | | ' / |  \| \___ \| || |_
+| |\  |  __/| |_| | . \ | |\  |___) |__   _|
+|_| \_|_|   |____/|_|\_|_| \_|____/   |_|
 
-╔═════════════════════════════════════════════════════════════════════════════════════╗
-║ █   █   █ █ █   █ █ █   █   █   █ █ █   █ █ █   █   █   █ █ █   █ █ █   █ █ █   █ █ █ ║
-║ █  █    █   █   █   █   █   █   █       █   █   █   █   █   █   █   █   █   █   █   █ ║
-║ █ █     █ █ █   █ █ █   █ █ █   █ █ █   █ █ █   █ █ █   █   █   █ █ █   █   █   █ █ █ ║
-║ █  █    █   █   █   █   █   █   █       █   █   █   █   █   █   █   █   █   █   █   █ ║
-║ █   █   █   █   █   █   █   █   █ █ █   █   █   █   █   █ █ █   █ █ █   █   █   █   █ ║
-╚═════════════════════════════════════════════════════════════════════════════════════╝     
-                                                          
 EOF
-sleep 10
+
 echo "🔑 Setting up NodeSource repository for Node.js..."
 sudo mkdir -p /etc/apt/keyrings
 curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | sudo gpg --dearmor -o /etc/apt/keyrings/nodesource.gpg
@@ -36,7 +26,7 @@ git clone https://github.com/achul123/panel5
 
 if [ $? -ne 0 ]; then
   echo "❌ Failed to clone the repository."
-  exit 1
+  exit 1;
 fi
 
 echo "📂 Changing directory to panel5..."
@@ -54,4 +44,4 @@ npm run createUser
 echo "🚀 Starting Panel5..."
 node .
 
-echo "📢 Don't forget to subscribe to my YouTube channel for more content! 👉 https://youtube.com/@kswarriorpro?si=u9kjhm-n7e3seV8Q 🎥🎮"
+echo "📢 Don't forget to subscribe to my YouTube channel for more content! 👉 https://youtube.com/@NEOKDEV 🎥🎮"
